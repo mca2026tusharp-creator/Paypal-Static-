@@ -1,0 +1,333 @@
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'PayPalSansSmall', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #001435;
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  transition: opacity 200ms ease;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.logo svg {
+  height: 30px;
+  width: auto;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #001435;
+  border-radius: 24px;
+  transition: background-color 200ms ease, color 200ms ease;
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  background-color: #f5f5f5;
+  color: #0070ba;
+}
+
+.nav-item .chevron {
+  width: 11px;
+  height: 11px;
+  transition: opacity 200ms ease;
+}
+
+.nav-item:hover .chevron {
+  opacity: 0.7;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 24px;
+  transition: background-color 200ms ease, transform 150ms ease, opacity 200ms ease;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-login {
+  background-color: #f5f7fa;
+  color: #001435;
+  border: 1px solid #d6d6d6;
+}
+
+.btn-login:hover {
+  background-color: #e8ebef;
+}
+
+.btn-signup-header {
+  background-color: #001435;
+  color: #fff;
+}
+
+.btn-signup-header:hover {
+  background-color: #1a2d4d;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 24px 100px;
+  text-align: center;
+  background-color: #fafafa;
+  min-height: calc(100vh - 64px);
+}
+
+/* ===== Account Toggle ===== */
+.account-toggle {
+  display: inline-flex;
+  align-items: center;
+  background-color: #efefef;
+  border-radius: 28px;
+  padding: 4px;
+  margin-bottom: 52px;
+}
+
+.toggle-option {
+  padding: 8px 24px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: 24px;
+  color: #6c7378;
+  transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+}
+
+.toggle-option:hover {
+  color: #001435;
+}
+
+.toggle-option.active {
+  background-color: #fff;
+  color: #001435;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+
+.toggle-option.active:hover {
+  background-color: #fff;
+}
+
+/* ===== Headings ===== */
+.hero-title {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #000;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.hero-description {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: #2c2e2f;
+  max-width: 580px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* ===== Hero Buttons ===== */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-signup-hero {
+  background-color: #001435;
+  color: #fff;
+  padding: 13px 34px;
+  font-size: 1rem;
+}
+
+.btn-signup-hero:hover {
+  background-color: #1a2d4d;
+}
+
+.btn-contact {
+  background-color: #f0f0f0;
+  color: #001435;
+  border: 1px solid #d6d6d6;
+  padding: 13px 34px;
+  font-size: 1rem;
+}
+
+.btn-contact:hover {
+  background-color: #e0e0e0;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .header {
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  .nav-item {
+    padding: 6px 10px;
+    font-size: 0.875rem;
+  }
+
+  .hero {
+    padding: 48px 20px 60px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .header {
+    padding: 0 16px;
+    height: 56px;
+    gap: 8px;
+  }
+
+  .header-left {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .btn-login,
+  .btn-signup-header {
+    padding: 8px 16px;
+    font-size: 0.8125rem;
+  }
+
+  .hero {
+    padding: 36px 16px 48px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 0.9375rem;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .account-toggle {
+    margin-bottom: 32px;
+  }
+}
